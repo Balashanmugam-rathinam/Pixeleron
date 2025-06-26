@@ -1,6 +1,26 @@
 # Pixeleron
-Pixeleron: Unified Deep Learning Toolkit for Super-Resolution
 
-In the digital age, the demand for high-quality visual content is rapidly increasing across various sectors, including medical imaging, surveillance, digital media production, and smartphone photography. While traditional upscaling techniques like interpolation are computationally light, they often fail to preserve fine textures and intricate details, leading to blurred or unrealistic results. In contrast, deep learning–based super-resolution (SR) techniques have shown remarkable success in reconstructing high-fidelity images. Models such as SRGAN, ESRGAN, Real-ESRGAN, SwinIR, and GFPGAN have each contributed significantly to advancing the field. However, these models are often implemented in isolation, making it difficult for end-users to switch between use cases or deploy them effectively in real-world applications. To address this gap, we introduce Pixeleron, a unified and modular super-resolution toolkit that brings together multiple state-of-the-art deep learning models into a single, streamlined platform. Designed for both researchers and creative professionals, Pixeleron supports a wide range of applications including general image enhancement, realistic face restoration, and video frame upscaling. It features a user-friendly Streamlit-based GUI, smart model selection based on input type, and batch processing for handling large volumes of data. Moreover, the toolkit supports export to ONNX and TFLite formats, allowing deployment on mobile and edge devices. Pixeleron has been rigorously evaluated on benchmark datasets such as DIV2K and CelebA using metrics like PSNR (Peak Signal-to-Noise Ratio), SSIM (Structural Similarity Index), and LPIPS (Learned Perceptual Image Patch Similarity). The results confirm its efficiency, flexibility, and offline usability, positioning Pixeleron as a powerful open-source solution for anyone looking to generate or restore high-resolution content seamlessly.
+Pixeleron is a unified deep learning toolkit for super-resolution. It integrates state-of-the-art models like SRGAN, ESRGAN, Real-ESRGAN, SwinIR, and GFPGAN into a user-friendly platform.
 
-Keywords: Super-resolution, Deep learning, Pixeleron, SRGAN, ESRGAN, Real-ESRGAN, SwinIR, GFPGAN, Face restoration, Video upscaling, Streamlit, ONNX, TFLite, PSNR, SSIM, LPIPS
+## 🚀 Features
+- Streamlit GUI for easy interaction
+- Smart model selection based on input type
+- Batch image processing support
+- Face restoration & video frame upscaling
+- Export support for ONNX and TFLite
+- Evaluates results using PSNR, SSIM, and LPIPS
+
+## 📁 Project Structure
+```
+Pixeleron/
+│
+├── app/              # Application logic and routing
+├── models/           # Pretrained model files or loaders
+├── assets/           # Icons, sample images, and logos
+├── docs/             # Documentation and evaluation reports
+├── configs/          # Configuration files
+└── streamlit_app.py  # Streamlit UI entry point
+```
+
+## 📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.

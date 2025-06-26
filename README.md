@@ -63,7 +63,15 @@ streamlit run main.py
 ```
 
 ## 📜 License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+Pixeleron is released under a **custom MIT-based license with attribution clause**.
+
+You are free to use, modify, distribute, and even include this software in commercial products, **as long as**:
+
+- You include credit to the original author: **Balashanmugam**
+- You do **not use the name "Pixeleron"** to endorse or promote derivative works without written permission
+
+See the full [LICENSE](LICENSE) file for details.
 
 ## 🙌 Acknowledgments
 - [SRGAN](https://github.com/tensorlayer/srgan)

@@ -1,26 +1,73 @@
-# Pixeleron
+# Pixeleron: Unified Deep Learning Toolkit for Super-Resolution
 
-Pixeleron is a unified deep learning toolkit for super-resolution. It integrates state-of-the-art models like SRGAN, ESRGAN, Real-ESRGAN, SwinIR, and GFPGAN into a user-friendly platform.
+Pixeleron is a unified, open-source super-resolution toolkit that combines multiple state-of-the-art deep learning models into one modular and user-friendly platform. It supports high-quality image enhancement, face restoration, and video upscaling through a smart Streamlit-based interface and batch processing pipeline. Pixeleron is ideal for researchers, developers, and creators looking to deploy scalable and accurate super-resolution solutions.
 
-## 🚀 Features
-- Streamlit GUI for easy interaction
-- Smart model selection based on input type
-- Batch image processing support
-- Face restoration & video frame upscaling
-- Export support for ONNX and TFLite
-- Evaluates results using PSNR, SSIM, and LPIPS
+## 🚀 Key Features
+- 🔍 Smart Model Selector: Automatically routes input to the appropriate model (image, face, or video)
+- 🧠 Integrated Models: SRGAN, ESRGAN, Real-ESRGAN, SwinIR, GFPGAN
+- 🖼 Face Restoration: GFPGAN integration for natural facial detail reconstruction
+- 📹 Video Frame Upscaling: SwinIR and Real-ESRGAN video frame-by-frame enhancement
+- 💡 Streamlit GUI: Clean, interactive UI for non-coders and quick prototyping
+- ⚙️ ONNX/TFLite Export: Deploy models on edge devices and mobile platforms
+- 📊 Evaluation Metrics: Built-in support for PSNR, SSIM, and LPIPS benchmarking
+- 🐳 Docker Support: Containerized setup for easy deployment
 
 ## 📁 Project Structure
 ```
-Pixeleron/
+super_resolution_toolkit/
 │
-├── app/              # Application logic and routing
-├── models/           # Pretrained model files or loaders
-├── assets/           # Icons, sample images, and logos
-├── docs/             # Documentation and evaluation reports
-├── configs/          # Configuration files
-└── streamlit_app.py  # Streamlit UI entry point
+├── app/                            # Main application logic
+│   ├── __init__.py
+│   ├── gui.py                      # Streamlit GUI
+│   ├── processor.py               # Main logic to route inputs to models
+│   ├── model_selector.py          # Smart model selector (image/video/face)
+│   ├── utils.py                   # Utility functions (resize, metrics, etc.)
+│   └── export.py                  # ONNX/TFLite export logic
+│
+├── models/                        # Model loading and wrappers
+│   ├── __init__.py
+│   ├── srgan.py
+│   ├── esrgan.py
+│   ├── real_esrgan.py
+│   ├── swinir.py
+│   └── gfpgan.py
+│
+├── assets/                        # Static files and sample images/videos
+│   ├── samples/
+│   └── icons/
+│
+├── configs/                       # Config and model settings
+│   ├── model_paths.yaml
+│   └── gui_config.yaml
+│
+├── benchmarks/                    # Benchmark results and test scripts
+│   ├── metrics.py
+│   └── evaluate_on_datasets.py
+│
+├── notebooks/                     # Optional Jupyter experiments or demos
+│   └── comparison_plot.ipynb
+│
+├── requirements.txt               # Python dependencies
+├── Dockerfile                     # For containerization
+├── README.md                      # GitHub documentation
+├── .streamlit/config.toml         # Theme & layout settings for Streamlit
+└── main.py                        # Entry point for Streamlit app
+```
+
+## 📦 Installation
+```bash
+git clone https://github.com/Balashanmugam-rathinam/Pixeleron.git
+cd Pixeleron
+pip install -r requirements.txt
+streamlit run main.py
 ```
 
 ## 📜 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 🙌 Acknowledgments
+- [SRGAN](https://github.com/tensorlayer/srgan)
+- [ESRGAN](https://github.com/xinntao/ESRGAN)
+- [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)
+- [GFPGAN](https://github.com/TencentARC/GFPGAN)
+- [SwinIR](https://github.com/JingyunLiang/SwinIR)
